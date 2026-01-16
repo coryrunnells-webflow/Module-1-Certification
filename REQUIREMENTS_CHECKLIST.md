@@ -157,8 +157,8 @@
   - [x] `og:title`
   - [x] `og:description`
   - [x] `og:type` (website)
-  - [ ] `og:url` ⚠️ *Empty - needs live URL when published*
-  - [ ] `og:image` ⚠️ *Empty - needs image URL when published*
+  - [x] `og:url` ✅ https://coryrunnells-webflow.github.io/Module-1-Certification/
+  - [x] `og:image` ✅ Castle image for social sharing
 - [x] All images have alt text
 
 **Talking Points:**
@@ -328,9 +328,9 @@
 ---
 
 ## Publishing
-- [ ] Site published and accessible
-- [ ] URL ready to share: _______________
-- [ ] Can explain publishing process
+- [x] Site published and accessible
+- [x] URL ready to share: https://coryrunnells-webflow.github.io/Module-1-Certification/
+- [x] Can explain publishing process
 
 **Next Steps:**
 1. Publish to Replit, CodeSandbox, Vercel, Netlify, or GitHub Pages
@@ -348,6 +348,6 @@
 | CSS Styling | ✅ Complete | Tailwind + custom animations |
 | JavaScript (3 functions) | ✅ Complete | fetch + scroll animations + accordions + bonus effects |
 | Accessibility | ✅ Complete | ARIA, keyboard nav, reduced motion |
-| SEO | ⚠️ Almost | Need og:url and og:image after publish |
-| Performance | ⚠️ Pending | Run Lighthouse after publish |
-| Publishing | ❌ Pending | Ready to deploy |
+| SEO | ✅ Complete | All meta tags including Open Graph |
+| Performance | ⚠️ Pending | Run Lighthouse audit |
+| Publishing | ✅ Complete | Live at GitHub Pages |
