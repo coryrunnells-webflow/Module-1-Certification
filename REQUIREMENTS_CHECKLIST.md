@@ -198,18 +198,23 @@
 >   - `will-change: transform` hints to browser for optimization
 > - **Image Formats:** WebP for the cursor (smaller file, modern format), JPG for hero (good compression for photos)
 > - **Potential Improvements:**
->   - Could add `loading="lazy"` to images below the fold
+>   - ✅ Added `loading="lazy"` to RSS feed images (below the fold)
 >   - Production build would minify CSS/JS
 >   - Could self-host fonts for better performance
 >   - Could use Tailwind CLI for tree-shaking unused styles
 >
-> **Explaining the Lighthouse Score (71 Performance):**
-> - "I achieved perfect scores in Accessibility (100), SEO (100), and Best Practices (96). The Performance score of 71 reflects a deliberate trade-off I made for this project."
+> **Explaining the Lighthouse Score (~67-71 Performance):**
+> - "I achieved perfect scores in Accessibility (100), SEO (100), and Best Practices (96). The Performance score of ~70 reflects deliberate trade-offs I made for this project."
 > - "I used Tailwind CSS via CDN for rapid prototyping and development speed. The CDN loads the entire Tailwind library (~300KB), whereas a production build using the Tailwind CLI would tree-shake unused utilities, potentially reducing that to ~10-20KB."
 > - "Similarly, GSAP and ScrollTrigger are loaded from CDN. In production, I would bundle only the specific GSAP features needed."
-> - "The hero image (castle photo) is ~2MB. In production, I would compress this further, serve responsive sizes with `srcset`, and use modern formats like AVIF."
 > - "These are intentional trade-offs: CDNs offer excellent caching (users who've visited other sites using these libraries already have them cached), and the development speed benefit outweighed micro-optimization for a certification demo."
 > - "The key takeaway is that I understand *why* the score is what it is and *how* to improve it for production."
+>
+> **RSS Feed Images (External Content):**
+> - "The largest payload items (~3-5MB total) are external images loaded via the RSS feed from Disney blogs like planDisney and Inside the Magic."
+> - "I compressed my local hero image with TinyPNG — it's no longer in the top resources. But external blog images are outside my control."
+> - "In production, I could implement: (1) image proxying through a CDN that auto-optimizes, (2) lazy loading for RSS images, or (3) placeholder images with click-to-load."
+> - "This demonstrates understanding of the boundary between controllable and uncontrollable assets when fetching third-party content."
 
 ---
 

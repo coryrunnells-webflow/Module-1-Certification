@@ -213,6 +213,7 @@ function createBlogCard(post) {
                 <img 
                     src="${escapeHtml(imageUrl)}" 
                     alt="" 
+                    loading="lazy"
                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     onerror="this.src='https://images.unsplash.com/photo-1597466599360-3b9775841aec?w=400&h=300&fit=crop'"
                 >
