@@ -861,7 +861,7 @@ function setupMickeyCursor() {
     
     // Create the Mickey cursor element
     const mickeyCursor = document.createElement('img');
-    mickeyCursor.src = 'assets/images/EmojiBlitzMickey1.webp';
+    mickeyCursor.src = './assets/images/EmojiBlitzMickey1.webp';
     mickeyCursor.alt = '';
     mickeyCursor.className = 'mickey-cursor';
     mickeyCursor.setAttribute('aria-hidden', 'true');
