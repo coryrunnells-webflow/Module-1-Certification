@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Disney World Guide - Complete Planning Resource for Magic Kingdom, EPCOT & More</title>
+    <meta name="description" content="Your complete guide to Walt Disney World Resort. Explore all four theme parks, plan your visit, discover dining options, transportation, and get expert tips for your magical vacation.">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Disney World Guide - Complete Planning Resource">
+    <meta property="og:description" content="Your complete guide to Walt Disney World Resort. Explore parks, plan your visit, and get expert tips.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        // Mickey Mouse palette
+                        'mickey-red': '#E31837',
+                        'mickey-red-dark': '#C41230',
+                        'mickey-red-text': '#B91C1C', // Darker red for text - WCAG AA compliant (5.3:1)
+                        'mickey-black': '#1A1A1A',
+                        'mickey-yellow': '#FFD700',
+                        'mickey-yellow-light': '#FFF3B0',
+                        'cream': '#FFFBF0',
+                        'cream-dark': '#F5F0E6',
+                    },
+                    fontFamily: {
+                        sans: ['"Nunito"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts - Playful rounded font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-cream text-mickey-black font-sans">
+    <!-- Navigation -->
+    <nav class="bg-white border-b border-gray-200 sticky top-0 z-50 shadow-sm" role="navigation" aria-label="Main navigation">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="#hero" class="text-2xl font-bold text-mickey-black hover:text-mickey-red-text transition-colors" aria-label="Disney World Guide home">🏰 Disney World</a>
+                </div>
+                <button id="mobile-menu-button" class="md:hidden p-2 rounded-md text-gray-600 hover:bg-gray-100 hover:text-mickey-red-text focus:outline-none focus:ring-2 focus:ring-mickey-red" aria-label="Toggle mobile menu" aria-expanded="false">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+                <ul id="nav-menu" class="hidden md:flex space-x-8" role="list">
+                    <li><a href="#parks" class="text-gray-600 hover:text-mickey-red-text font-medium transition-colors">Parks</a></li>
+                    <li><a href="#planning" class="text-gray-600 hover:text-mickey-red-text font-medium transition-colors">Planning</a></li>
+                    <li><a href="#tips" class="text-gray-600 hover:text-mickey-red-text font-medium transition-colors">Tips</a></li>
+                    <li><a href="#dining" class="text-gray-600 hover:text-mickey-red-text font-medium transition-colors">Dining</a></li>
+                    <li><a href="#resources" class="text-gray-600 hover:text-mickey-red-text font-medium transition-colors">Resources</a></li>
+                </ul>
+            </div>
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden pb-4">
+                <ul class="space-y-2" role="list">
+                    <li><a href="#parks" class="block px-3 py-2 text-gray-600 hover:bg-mickey-red hover:text-white rounded-md font-medium">Parks</a></li>
+                    <li><a href="#planning" class="block px-3 py-2 text-gray-600 hover:bg-mickey-red hover:text-white rounded-md font-medium">Planning</a></li>
+                    <li><a href="#tips" class="block px-3 py-2 text-gray-600 hover:bg-mickey-red hover:text-white rounded-md font-medium">Tips</a></li>
+                    <li><a href="#dining" class="block px-3 py-2 text-gray-600 hover:bg-mickey-red hover:text-white rounded-md font-medium">Dining</a></li>
+                    <li><a href="#resources" class="block px-3 py-2 text-gray-600 hover:bg-mickey-red hover:text-white rounded-md font-medium">Resources</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section - Two Column with Right Bleed Image -->
+        <section id="hero" class="relative bg-gradient-to-br from-white via-blue-50 to-sky-100 overflow-hidden">
+            <div class="mx-auto max-w-7xl">
+                <div class="relative z-10 lg:grid lg:grid-cols-2 lg:gap-8">
+                    <!-- Left Column - Text Content -->
+                    <div class="px-6 py-24 sm:py-32 lg:py-40 lg:px-8 lg:pr-12">
+                        <div class="max-w-lg">
+                            <span class="inline-flex items-center gap-2 bg-mickey-red text-white font-bold tracking-wide uppercase text-sm mb-4 px-4 py-2 rounded-full">
+                                <span>✨</span> Walt Disney World Resort
+                            </span>
+                            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-mickey-black mb-6 leading-tight">Welcome to the Magic</h1>
+                            <p class="text-lg sm:text-xl text-gray-700 mb-8 leading-relaxed">Your complete guide to planning the perfect Walt Disney World vacation. Discover tips, insider secrets, and everything you need to know.</p>
+                            <div class="flex flex-col sm:flex-row gap-4">
+                                <a href="#introduction" class="inline-flex items-center justify-center bg-mickey-red text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-mickey-red-dark transition-all hover:scale-105 focus:outline-none focus:ring-4 focus:ring-mickey-red/50 shadow-lg">
+                                    Start Planning
+                                    <svg class="ml-2 w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                    </svg>
+                                </a>
+                                <a href="#parks" class="inline-flex items-center justify-center border-2 border-mickey-black text-mickey-black px-8 py-4 rounded-full font-bold text-lg hover:bg-mickey-black hover:text-white transition-all hover:scale-105 focus:outline-none focus:ring-4 focus:ring-mickey-black/30">
+                                    Explore Parks
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Right Column - Full Bleed Image -->
+                    <div class="relative lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
+                        <img 
+                            src="assets/images/2020-wdw-magic-kingdom-reopening-cinderella-castle-general-stock-main-street-2-2.jpg" 
+                            alt="Cinderella Castle at Magic Kingdom with Main Street USA in the foreground" 
+                            class="h-64 w-full object-cover sm:h-80 lg:h-full lg:absolute lg:inset-0"
+                        >
+                        <!-- Subtle gradient overlay -->
+                        <div class="absolute inset-0 bg-gradient-to-t from-sky-100 via-transparent to-transparent lg:bg-gradient-to-r lg:from-sky-100/80 lg:via-transparent lg:to-transparent"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Introduction Section -->
+        <section id="introduction" class="bg-white py-24 sm:py-32">
+            <div class="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
+                <h2 class="text-center text-base/7 font-bold text-mickey-red-text uppercase tracking-wide">The Magic Awaits</h2>
+                <p class="mx-auto mt-2 max-w-lg text-center text-4xl font-extrabold tracking-tight text-balance text-mickey-black sm:text-5xl">What is Disney World?</p>
+                <div class="mx-auto mt-6 max-w-2xl text-center text-lg/8 text-gray-600">
+                    <p class="mb-4">
+                        Walt Disney World Resort, located in Orlando, Florida, is the most visited vacation resort in the world. Spanning over 25,000 acres, it's home to four incredible theme parks, two water parks, numerous hotels, shopping, dining, and entertainment venues.
+                    </p>
+                    <p class="mb-4">
+                        Since opening in 1971, Disney World has been creating magical experiences for millions of guests from around the world. Each park offers unique attractions, shows, and experiences that bring Disney stories to life.
+                    </p>
+                    <p>
+                        Whether you're a first-time visitor or a seasoned Disney fan, there's always something new to discover and experience at the most magical place on earth.
+                    </p>
+                </div>
+                
+                <!-- Bento Grid Layout for Statistics -->
+                <div class="mt-10 grid gap-4 sm:mt-16 lg:grid-cols-3 lg:grid-rows-2">
+                    <div class="relative lg:row-span-2">
+                        <div class="absolute inset-px rounded-lg bg-cream-dark lg:rounded-l-4xl"></div>
+                        <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] lg:rounded-l-[calc(2rem+1px)]">
+                            <div class="px-8 py-8 sm:px-10 sm:py-10">
+                                <p class="text-5xl font-semibold tracking-tight text-mickey-black max-lg:text-center">4</p>
+                                <p class="mt-2 text-lg font-medium tracking-tight text-mickey-black max-lg:text-center">Theme Parks</p>
+                                <p class="mt-3 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">Magic Kingdom, EPCOT, Hollywood Studios, and Animal Kingdom — each offering unique adventures, from fairy tale castles to intergalactic journeys.</p>
+                                <p class="mt-3 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">Plus two water parks, Disney Springs shopping & dining district, and over 25 resort hotels to complete your magical stay.</p>
+                            </div>
+                        </div>
+                        <div class="pointer-events-none absolute inset-px rounded-lg shadow-sm outline outline-gray-200 lg:rounded-l-4xl"></div>
+                    </div>
+                    <div class="relative max-lg:row-start-1">
+                        <div class="absolute inset-px rounded-lg bg-cream-dark max-lg:rounded-t-4xl"></div>
+                        <div class="relative flex h-full flex-col justify-center overflow-hidden rounded-[calc(var(--radius-lg)+1px)] max-lg:rounded-t-[calc(2rem+1px)]">
+                            <div class="px-8 py-8 sm:px-10 sm:py-10">
+                                <p class="text-4xl font-semibold tracking-tight text-mickey-black max-lg:text-center">25,000+</p>
+                                <p class="mt-2 text-lg font-medium tracking-tight text-mickey-black max-lg:text-center">Acres</p>
+                                <p class="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">That's roughly the size of San Francisco! Twice the size of Manhattan island.</p>
+                            </div>
+                        </div>
+                        <div class="pointer-events-none absolute inset-px rounded-lg shadow-sm outline outline-gray-200 max-lg:rounded-t-4xl"></div>
+                    </div>
+                    <div class="relative max-lg:row-start-3 lg:col-start-2 lg:row-start-2">
+                        <div class="absolute inset-px rounded-lg bg-cream-dark"></div>
+                        <div class="relative flex h-full flex-col justify-center overflow-hidden rounded-[calc(var(--radius-lg)+1px)]">
+                            <div class="px-8 py-8 sm:px-10 sm:py-10">
+                                <p class="text-4xl font-semibold tracking-tight text-mickey-black max-lg:text-center">58M+</p>
+                                <p class="mt-2 text-lg font-medium tracking-tight text-mickey-black max-lg:text-center">Annual Visitors</p>
+                                <p class="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">More guests than the population of Spain visit each year!</p>
+                            </div>
+                        </div>
+                        <div class="pointer-events-none absolute inset-px rounded-lg shadow-sm outline outline-gray-200"></div>
+                    </div>
+                    <div class="relative lg:row-span-2">
+                        <div class="absolute inset-px rounded-lg bg-cream-dark max-lg:rounded-b-4xl lg:rounded-r-4xl"></div>
+                        <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] max-lg:rounded-b-[calc(2rem+1px)] lg:rounded-r-[calc(2rem+1px)]">
+                            <div class="px-8 py-8 sm:px-10 sm:py-10">
+                                <p class="text-5xl font-semibold tracking-tight text-mickey-black max-lg:text-center">1971</p>
+                                <p class="mt-2 text-lg font-medium tracking-tight text-mickey-black max-lg:text-center">Year Opened</p>
+                                <p class="mt-3 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">Walt Disney's dream realized — though he never saw it completed. The resort opened October 1st, just five years after his passing.</p>
+                                <p class="mt-3 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">Over 50 years later, the magic continues to evolve with new lands, attractions, and technologies that Walt himself could only have imagined.</p>
+                            </div>
+                        </div>
+                        <div class="pointer-events-none absolute inset-px rounded-lg shadow-sm outline outline-gray-200 max-lg:rounded-b-4xl lg:rounded-r-4xl"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Four Theme Parks Section -->
+        <section id="parks" class="bg-cream py-24 sm:py-32">
+            <div class="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
+                <h2 class="text-center text-base/7 font-semibold text-mickey-red-text">Discover Magic</h2>
+                <p class="mx-auto mt-2 max-w-lg text-center text-4xl font-semibold tracking-tight text-balance text-mickey-black sm:text-5xl">Explore the Four Theme Parks</p>
+                <div class="mt-10 grid gap-4 sm:mt-16 md:grid-cols-2">
+                    <!-- Magic Kingdom -->
+                    <article class="relative park-card" tabindex="0" role="article" aria-label="Magic Kingdom park information">
+                        <div class="absolute inset-px rounded-lg bg-cream-dark"></div>
+                        <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)]">
+                            <div class="h-64 bg-gradient-to-br from-disney-blue to-disney-blue-dark flex items-center justify-center">
+                                <span class="text-8xl">🏰</span>
+                            </div>
+                            <div class="px-8 pt-8 pb-6 sm:px-10 sm:pt-10">
+                                <h3 class="text-3xl font-semibold tracking-tight text-mickey-black mb-3">Magic Kingdom</h3>
+                                <p class="text-gray-600 mb-4">The most magical place on earth, featuring iconic Cinderella Castle and classic Disney attractions that have delighted families for generations.</p>
+                                <ul class="space-y-2 mb-4 text-sm text-gray-600">
+                                    <li>• Cinderella Castle</li>
+                                    <li>• Space Mountain</li>
+                                    <li>• Pirates of the Caribbean</li>
+                                    <li>• It's a Small World</li>
+                                </ul>
+                                <button class="text-mickey-red-text font-semibold hover:text-indigo-300 focus:outline-none focus:ring-2 focus:ring-mickey-red rounded" aria-expanded="false" aria-controls="mk-details">Learn More</button>
+                                <div id="mk-details" class="hidden mt-4 text-gray-600">
+                                    <p>Best for families with young children. Home to classic attractions and beloved characters. Don't miss the nightly fireworks show!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pointer-events-none absolute inset-px rounded-lg shadow-sm outline outline-gray-200"></div>
+                    </article>
+
+                    <!-- EPCOT -->
+                    <article class="relative park-card" tabindex="0" role="article" aria-label="EPCOT park information">
+                        <div class="absolute inset-px rounded-lg bg-cream-dark"></div>
+                        <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)]">
+                            <div class="h-64 bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center">
+                                <span class="text-8xl">🌍</span>
+                            </div>
+                            <div class="px-8 pt-8 pb-6 sm:px-10 sm:pt-10">
+                                <h3 class="text-3xl font-semibold tracking-tight text-mickey-black mb-3">EPCOT</h3>
+                                <p class="text-gray-600 mb-4">Celebrate human achievement and explore cultures from around the world. Experience innovation, culture, and cuisine in one incredible park.</p>
+                                <ul class="space-y-2 mb-4 text-sm text-gray-600">
+                                    <li>• Spaceship Earth</li>
+                                    <li>• World Showcase</li>
+                                    <li>• Test Track</li>
+                                    <li>• Frozen Ever After</li>
+                                </ul>
+                                <button class="text-mickey-red-text font-semibold hover:text-indigo-300 focus:outline-none focus:ring-2 focus:ring-mickey-red rounded" aria-expanded="false" aria-controls="epcot-details">Learn More</button>
+                                <div id="epcot-details" class="hidden mt-4 text-gray-600">
+                                    <p>Best for adults, food lovers, and culture enthusiasts. Home to multiple festivals throughout the year featuring food, music, and art from around the world.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pointer-events-none absolute inset-px rounded-lg shadow-sm outline outline-gray-200"></div>
+                    </article>
+
+                    <!-- Hollywood Studios -->
+                    <article class="relative park-card" tabindex="0" role="article" aria-label="Hollywood Studios park information">
+                        <div class="absolute inset-px rounded-lg bg-cream-dark"></div>
+                        <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)]">
+                            <div class="h-64 bg-gradient-to-br from-purple-600 to-purple-800 flex items-center justify-center">
+                                <span class="text-8xl">🎬</span>
+                            </div>
+                            <div class="px-8 pt-8 pb-6 sm:px-10 sm:pt-10">
+                                <h3 class="text-3xl font-semibold tracking-tight text-mickey-black mb-3">Hollywood Studios</h3>
+                                <p class="text-gray-600 mb-4">Step into the world of movies, TV, and entertainment. Experience thrilling attractions and immerse yourself in your favorite stories.</p>
+                                <ul class="space-y-2 mb-4 text-sm text-gray-600">
+                                    <li>• Star Wars: Galaxy's Edge</li>
+                                    <li>• Tower of Terror</li>
+                                    <li>• Toy Story Land</li>
+                                    <li>• Rock 'n' Roller Coaster</li>
+                                </ul>
+                                <button class="text-mickey-red-text font-semibold hover:text-indigo-300 focus:outline-none focus:ring-2 focus:ring-mickey-red rounded" aria-expanded="false" aria-controls="hs-details">Learn More</button>
+                                <div id="hs-details" class="hidden mt-4 text-gray-600">
+                                    <p>Best for movie fans and thrill seekers. Home to Star Wars: Galaxy's Edge, one of the most immersive themed lands ever created.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pointer-events-none absolute inset-px rounded-lg shadow-sm outline outline-gray-200"></div>
+                    </article>
+
+                    <!-- Animal Kingdom -->
+                    <article class="relative park-card" tabindex="0" role="article" aria-label="Animal Kingdom park information">
+                        <div class="absolute inset-px rounded-lg bg-cream-dark"></div>
+                        <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)]">
+                            <div class="h-64 bg-gradient-to-br from-green-600 to-green-800 flex items-center justify-center">
+                                <span class="text-8xl">🌿</span>
+                            </div>
+                            <div class="px-8 pt-8 pb-6 sm:px-10 sm:pt-10">
+                                <h3 class="text-3xl font-semibold tracking-tight text-mickey-black mb-3">Animal Kingdom</h3>
+                                <p class="text-gray-600 mb-4">Discover the magic of nature and adventure. Experience wildlife, thrilling attractions, and the world of Pandora - The World of Avatar.</p>
+                                <ul class="space-y-2 mb-4 text-sm text-gray-600">
+                                    <li>• Pandora - The World of Avatar</li>
+                                    <li>• Expedition Everest</li>
+                                    <li>• Kilimanjaro Safaris</li>
+                                    <li>• Avatar Flight of Passage</li>
+                                </ul>
+                                <button class="text-mickey-red-text font-semibold hover:text-indigo-300 focus:outline-none focus:ring-2 focus:ring-mickey-red rounded" aria-expanded="false" aria-controls="ak-details">Learn More</button>
+                                <div id="ak-details" class="hidden mt-4 text-gray-600">
+                                    <p>Best for nature lovers and adventure seekers. The largest Disney theme park in the world, combining animal encounters with thrilling attractions.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pointer-events-none absolute inset-px rounded-lg shadow-sm outline outline-gray-200"></div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Planning Your Visit Section -->
+        <section id="planning" class="bg-white py-24 sm:py-32">
+            <div class="mx-auto max-w-2xl px-6 lg:max-w-4xl lg:px-8">
+                <h2 class="text-center text-base/7 font-semibold text-mickey-red-text">Plan Your Trip</h2>
+                <p class="mx-auto mt-2 max-w-lg text-center text-4xl font-semibold tracking-tight text-balance text-mickey-black sm:text-5xl">Planning Your Visit</p>
+                
+                <!-- Accordion for Planning Topics -->
+                <div class="mt-10 space-y-4">
+                    <div class="relative">
+                        <div class="absolute inset-px rounded-lg bg-cream-dark"></div>
+                        <div class="relative rounded-[calc(var(--radius-lg)+1px)]">
+                            <button class="w-full px-6 py-4 text-left bg-cream-dark flex justify-between items-center accordion-button rounded-lg" aria-expanded="false" aria-controls="planning-best-times">
+                                <span id="accordion-heading-best-times" class="font-semibold text-lg text-mickey-black">Best Times to Visit</span>
+                                <svg class="w-5 h-5 text-mickey-red" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </button>
+                            <div id="planning-best-times" role="region" aria-labelledby="accordion-heading-best-times" class="hidden px-6 py-4 text-gray-600">
+                                <p class="mb-2">The best times to visit Disney World are typically:</p>
+                                <ul class="list-disc list-inside space-y-1 mb-2">
+                                    <li>January and February (after New Year's, before spring break)</li>
+                                    <li>Late April through early May</li>
+                                    <li>September through early November (avoiding holidays)</li>
+                                </ul>
+                                <p>Avoid peak times like summer, holidays, and spring break for shorter wait times and better weather.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relative">
+                        <div class="absolute inset-px rounded-lg bg-cream-dark"></div>
+                        <div class="relative rounded-[calc(var(--radius-lg)+1px)]">
+                            <button class="w-full px-6 py-4 text-left bg-cream-dark flex justify-between items-center accordion-button rounded-lg" aria-expanded="false" aria-controls="planning-tickets">
+                                <span id="accordion-heading-tickets" class="font-semibold text-lg text-mickey-black">Ticket Options</span>
+                                <svg class="w-5 h-5 text-mickey-red" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </button>
+                            <div id="planning-tickets" role="region" aria-labelledby="accordion-heading-tickets" class="hidden px-6 py-4 text-gray-600">
+                                <p class="mb-2"><strong>Single Park Tickets:</strong> Access to one park per day. Best for first-time visitors or longer stays.</p>
+                                <p class="mb-2"><strong>Park Hopper:</strong> Visit multiple parks in one day. Great for returning visitors who want flexibility.</p>
+                                <p class="mb-2"><strong>Park Hopper Plus:</strong> Includes water parks and other experiences. Perfect for extended stays.</p>
+                                <p>Multi-day tickets offer better value per day. Consider your travel style when choosing.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relative">
+                        <div class="absolute inset-px rounded-lg bg-cream-dark"></div>
+                        <div class="relative rounded-[calc(var(--radius-lg)+1px)]">
+                            <button class="w-full px-6 py-4 text-left bg-cream-dark flex justify-between items-center accordion-button rounded-lg" aria-expanded="false" aria-controls="planning-genie">
+                                <span id="accordion-heading-genie" class="font-semibold text-lg text-mickey-black">Genie+ and Lightning Lane</span>
+                                <svg class="w-5 h-5 text-mickey-red" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </button>
+                            <div id="planning-genie" role="region" aria-labelledby="accordion-heading-genie" class="hidden px-6 py-4 text-gray-600">
+                                <p class="mb-2"><strong>Genie+:</strong> A paid service that allows you to skip the regular standby line at select attractions using Lightning Lane entrances.</p>
+                                <p class="mb-2"><strong>Individual Lightning Lane:</strong> Separate purchase for the most popular attractions like Star Wars: Rise of the Resistance.</p>
+                                <p>Genie+ pricing varies by date. Purchase through the My Disney Experience app on the day of your visit. Availability is limited.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relative">
+                        <div class="absolute inset-px rounded-lg bg-cream-dark"></div>
+                        <div class="relative rounded-[calc(var(--radius-lg)+1px)]">
+                            <button class="w-full px-6 py-4 text-left bg-cream-dark flex justify-between items-center accordion-button rounded-lg" aria-expanded="false" aria-controls="planning-days">
+                                <span id="accordion-heading-days" class="font-semibold text-lg text-mickey-black">How Many Days Needed</span>
+                                <svg class="w-5 h-5 text-mickey-red" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </button>
+                            <div id="planning-days" role="region" aria-labelledby="accordion-heading-days" class="hidden px-6 py-4 text-gray-600">
+                                <p class="mb-2"><strong>Minimum:</strong> 4-5 days to experience all four theme parks at a comfortable pace.</p>
+                                <p class="mb-2"><strong>Recommended:</strong> 6-7 days allows time to revisit favorites, explore resorts, and enjoy dining experiences.</p>
+                                <p class="mb-2"><strong>Extended Stay:</strong> 8+ days for a relaxed vacation with time for water parks, Disney Springs, and resort activities.</p>
+                                <p>Consider adding rest days, especially with young children, to avoid burnout.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relative">
+                        <div class="absolute inset-px rounded-lg bg-cream-dark"></div>
+                        <div class="relative rounded-[calc(var(--radius-lg)+1px)]">
+                            <button class="w-full px-6 py-4 text-left bg-cream-dark flex justify-between items-center accordion-button rounded-lg" aria-expanded="false" aria-controls="planning-stay">
+                                <span id="accordion-heading-stay" class="font-semibold text-lg text-mickey-black">Where to Stay</span>
+                                <svg class="w-5 h-5 text-mickey-red" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </button>
+                            <div id="planning-stay" role="region" aria-labelledby="accordion-heading-stay" class="hidden px-6 py-4 text-gray-600">
+                                <p class="mb-2"><strong>On-Site Benefits:</strong> Early park entry, free transportation, package delivery, and immersive theming.</p>
+                                <p class="mb-2"><strong>Off-Site Options:</strong> Often more affordable, more space, and flexibility. You'll need a car or rideshare.</p>
+                                <p>On-site resorts range from value to deluxe. Off-site hotels offer great value, especially for larger families. Consider your budget and priorities.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tips & Tricks Section -->
+        <section id="tips" class="bg-cream py-24 sm:py-32">
+            <div class="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
+                <h2 class="text-center text-base/7 font-semibold text-mickey-red-text">Expert Advice</h2>
+                <p class="mx-auto mt-2 max-w-lg text-center text-4xl font-semibold tracking-tight text-balance text-mickey-black sm:text-5xl">Tips & Tricks</p>
+                <div class="mt-10 grid gap-4 sm:mt-16 md:grid-cols-3">
+                    <div class="relative tip-card">
+                        <div class="absolute inset-px rounded-lg bg-cream-dark"></div>
+                        <div class="relative p-6 rounded-[calc(var(--radius-lg)+1px)]">
+                            <div class="text-4xl mb-4">🌅</div>
+                            <h3 class="text-xl font-semibold tracking-tight mb-3 text-mickey-black">Arrive Early (Rope Drop)</h3>
+                            <p class="text-gray-600">Get to the park 30-45 minutes before official opening to experience popular attractions with minimal wait times.</p>
+                        </div>
+                        <div class="pointer-events-none absolute inset-px rounded-lg shadow-sm outline outline-gray-200"></div>
+                    </div>
+                    <div class="relative tip-card">
+                        <div class="absolute inset-px rounded-lg bg-cream-dark"></div>
+                        <div class="relative p-6 rounded-[calc(var(--radius-lg)+1px)]">
+                            <div class="text-4xl mb-4">📱</div>
+                            <h3 class="text-xl font-semibold tracking-tight mb-3 text-mickey-black">Use the Mobile App</h3>
+                            <p class="text-gray-600">Download My Disney Experience app for mobile food ordering, wait times, Genie+ reservations, and park maps.</p>
+                        </div>
+                        <div class="pointer-events-none absolute inset-px rounded-lg shadow-sm outline outline-gray-200"></div>
+                    </div>
+                    <div class="relative tip-card">
+                        <div class="absolute inset-px rounded-lg bg-cream-dark"></div>
+                        <div class="relative p-6 rounded-[calc(var(--radius-lg)+1px)]">
+                            <div class="text-4xl mb-4">🗺️</div>
+                            <h3 class="text-xl font-semibold tracking-tight mb-3 text-mickey-black">Plan Your Route</h3>
+                            <p class="text-gray-600">Study park maps before visiting and plan your route to minimize walking. Start with attractions farthest from the entrance.</p>
+                        </div>
+                        <div class="pointer-events-none absolute inset-px rounded-lg shadow-sm outline outline-gray-200"></div>
+                    </div>
+                    <div class="relative tip-card">
+                        <div class="absolute inset-px rounded-lg bg-cream-dark"></div>
+                        <div class="relative p-6 rounded-[calc(var(--radius-lg)+1px)]">
+                            <div class="text-4xl mb-4">☕</div>
+                            <h3 class="text-xl font-semibold tracking-tight mb-3 text-mickey-black">Take Breaks</h3>
+                            <p class="text-gray-600">Schedule rest periods, especially during peak afternoon hours. Return to your hotel or find a quiet spot to recharge.</p>
+                        </div>
+                        <div class="pointer-events-none absolute inset-px rounded-lg shadow-sm outline outline-gray-200"></div>
+                    </div>
+                    <div class="relative tip-card">
+                        <div class="absolute inset-px rounded-lg bg-cream-dark"></div>
+                        <div class="relative p-6 rounded-[calc(var(--radius-lg)+1px)]">
+                            <div class="text-4xl mb-4">💧</div>
+                            <h3 class="text-xl font-semibold tracking-tight mb-3 text-mickey-black">Stay Hydrated</h3>
+                            <p class="text-gray-600">Bring refillable water bottles. Free ice water is available at any quick-service restaurant.</p>
+                        </div>
+                        <div class="pointer-events-none absolute inset-px rounded-lg shadow-sm outline outline-gray-200"></div>
+                    </div>
+                    <div class="relative tip-card">
+                        <div class="absolute inset-px rounded-lg bg-cream-dark"></div>
+                        <div class="relative p-6 rounded-[calc(var(--radius-lg)+1px)]">
+                            <div class="text-4xl mb-4">📸</div>
+                            <h3 class="text-xl font-semibold tracking-tight mb-3 text-mickey-black">Best Photo Spots</h3>
+                            <p class="text-gray-600">Cinderella Castle, Spaceship Earth, Hollywood Tower Hotel, and Tree of Life offer iconic photo opportunities.</p>
+                        </div>
+                        <div class="pointer-events-none absolute inset-px rounded-lg shadow-sm outline outline-gray-200"></div>
+                    </div>
+                    <div class="relative tip-card">
+                        <div class="absolute inset-px rounded-lg bg-cream-dark"></div>
+                        <div class="relative p-6 rounded-[calc(var(--radius-lg)+1px)]">
+                            <div class="text-4xl mb-4">🔍</div>
+                            <h3 class="text-xl font-semibold tracking-tight mb-3 text-mickey-black">Hidden Secrets</h3>
+                            <p class="text-gray-600">Look for Hidden Mickeys throughout the parks, explore resort lobbies, and ask cast members for insider tips!</p>
+                        </div>
+                        <div class="pointer-events-none absolute inset-px rounded-lg shadow-sm outline outline-gray-200"></div>
+                    </div>
+                    <div class="relative tip-card">
+                        <div class="absolute inset-px rounded-lg bg-cream-dark"></div>
+                        <div class="relative p-6 rounded-[calc(var(--radius-lg)+1px)]">
+                            <div class="text-4xl mb-4">⚡</div>
+                            <h3 class="text-xl font-semibold tracking-tight mb-3 text-mickey-black">Lightning Lane Tips</h3>
+                            <p class="text-gray-600">Book Individual Lightning Lane for top rides at 7am. Use Genie+ strategically for multiple shorter waits throughout the day.</p>
+                        </div>
+                        <div class="pointer-events-none absolute inset-px rounded-lg shadow-sm outline outline-gray-200"></div>
+                    </div>
+                    <div class="relative tip-card">
+                        <div class="absolute inset-px rounded-lg bg-cream-dark"></div>
+                        <div class="relative p-6 rounded-[calc(var(--radius-lg)+1px)]">
+                            <div class="text-4xl mb-4">🍽️</div>
+                            <h3 class="text-xl font-semibold tracking-tight mb-3 text-mickey-black">Book Dining Early</h3>
+                            <p class="text-gray-600">Popular restaurants book up fast! Make dining reservations 60 days in advance, especially for character meals and signature dining.</p>
+                        </div>
+                        <div class="pointer-events-none absolute inset-px rounded-lg shadow-sm outline outline-gray-200"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dining Guide Section -->
+        <section id="dining" class="bg-white py-24 sm:py-32">
+            <div class="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
+                <h2 class="text-center text-base/7 font-semibold text-mickey-red-text">Food & Dining</h2>
+                <p class="mx-auto mt-2 max-w-lg text-center text-4xl font-semibold tracking-tight text-balance text-mickey-black sm:text-5xl">Dining Guide</p>
+                <div class="mt-10 max-w-4xl mx-auto">
+                    <p class="text-lg text-gray-600 mb-8 text-center">
+                        Disney World offers incredible dining options for every taste and budget, from quick snacks to fine dining experiences.
+                    </p>
+                    <div class="grid md:grid-cols-3 gap-4 mb-8">
+                        <div class="relative">
+                            <div class="absolute inset-px rounded-lg bg-cream-dark"></div>
+                            <div class="relative p-6 rounded-[calc(var(--radius-lg)+1px)]">
+                                <h3 class="text-xl font-semibold tracking-tight mb-3 text-mickey-black">Quick Service</h3>
+                                <p class="text-gray-600 mb-3 text-sm/6">Fast, casual dining perfect for meals on the go. No reservations needed.</p>
+                                <p class="text-xs text-gray-600">Examples: Dole Whip, Turkey Legs, Mickey Pretzels</p>
+                            </div>
+                            <div class="pointer-events-none absolute inset-px rounded-lg shadow-sm outline outline-gray-200"></div>
+                        </div>
+                        <div class="relative">
+                            <div class="absolute inset-px rounded-lg bg-cream-dark"></div>
+                            <div class="relative p-6 rounded-[calc(var(--radius-lg)+1px)]">
+                                <h3 class="text-xl font-semibold tracking-tight mb-3 text-mickey-black">Table Service</h3>
+                                <p class="text-gray-600 mb-3 text-sm/6">Sit-down restaurants with full service. Reservations recommended (60 days in advance).</p>
+                                <p class="text-xs text-gray-600">Examples: Be Our Guest, Cinderella's Royal Table</p>
+                            </div>
+                            <div class="pointer-events-none absolute inset-px rounded-lg shadow-sm outline outline-gray-200"></div>
+                        </div>
+                        <div class="relative">
+                            <div class="absolute inset-px rounded-lg bg-cream-dark"></div>
+                            <div class="relative p-6 rounded-[calc(var(--radius-lg)+1px)]">
+                                <h3 class="text-xl font-semibold tracking-tight mb-3 text-mickey-black">Character Dining</h3>
+                                <p class="text-gray-600 mb-3 text-sm/6">Meet Disney characters while you dine. Popular with families. Book early!</p>
+                                <p class="text-xs text-gray-600">Examples: Chef Mickey's, Cinderella's Royal Table</p>
+                            </div>
+                            <div class="pointer-events-none absolute inset-px rounded-lg shadow-sm outline outline-gray-200"></div>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <div class="absolute inset-px rounded-lg bg-cream-dark"></div>
+                        <div class="relative p-6 rounded-[calc(var(--radius-lg)+1px)]">
+                            <h3 class="text-2xl font-semibold tracking-tight mb-4 text-mickey-black">Must-Try Snacks</h3>
+                            <ul class="space-y-2 text-gray-600">
+                                <li>• Dole Whip (Adventureland, Magic Kingdom)</li>
+                                <li>• Mickey-shaped Pretzels (Available throughout parks)</li>
+                                <li>• Turkey Legs (Frontierland, Magic Kingdom)</li>
+                                <li>• Churros (Multiple locations)</li>
+                                <li>• School Bread (Norway Pavilion, EPCOT)</li>
+                                <li>• Mickey Ice Cream Bars (Everywhere!)</li>
+                            </ul>
+                        </div>
+                        <div class="pointer-events-none absolute inset-px rounded-lg shadow-sm outline outline-gray-200"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Transportation Section -->
+        <section id="transportation" class="bg-cream py-24 sm:py-32">
+            <div class="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
+                <h2 class="text-center text-base/7 font-semibold text-mickey-red-text">Getting Around</h2>
+                <p class="mx-auto mt-2 max-w-lg text-center text-4xl font-semibold tracking-tight text-balance text-mickey-black sm:text-5xl">Transportation</p>
+                <div class="mt-10 grid gap-4 sm:mt-16 md:grid-cols-2 max-w-5xl mx-auto">
+                    <div class="relative">
+                        <div class="absolute inset-px rounded-lg bg-cream-dark"></div>
+                        <div class="relative p-6 rounded-[calc(var(--radius-lg)+1px)]">
+                            <h3 class="text-2xl font-semibold tracking-tight mb-4 text-mickey-black">Getting to Disney World</h3>
+                            <p class="text-gray-600 mb-4 text-sm/6"><strong class="text-mickey-black">By Air:</strong> Orlando International Airport (MCO) is 20 miles away. Disney's Magical Express service is available for on-site guests.</p>
+                            <p class="text-gray-600 text-sm/6"><strong class="text-mickey-black">By Car:</strong> Located off I-4, easily accessible from major highways. Parking available at all theme parks ($25/day).</p>
+                        </div>
+                        <div class="pointer-events-none absolute inset-px rounded-lg shadow-sm outline outline-gray-200"></div>
+                    </div>
+                    <div class="relative">
+                        <div class="absolute inset-px rounded-lg bg-cream-dark"></div>
+                        <div class="relative p-6 rounded-[calc(var(--radius-lg)+1px)]">
+                            <h3 class="text-2xl font-semibold tracking-tight mb-4 text-mickey-black">Transportation Within Property</h3>
+                            <ul class="space-y-2 text-gray-600 text-sm/6">
+                                <li><strong class="text-mickey-black">Monorail:</strong> Connects Magic Kingdom, EPCOT, and select resorts</li>
+                                <li><strong class="text-mickey-black">Buses:</strong> Free transportation to all parks and resorts</li>
+                                <li><strong class="text-mickey-black">Boats:</strong> Scenic water transportation to select parks and resorts</li>
+                                <li><strong class="text-mickey-black">Disney Skyliner:</strong> Aerial gondola system connecting EPCOT, Hollywood Studios, and resorts</li>
+                            </ul>
+                        </div>
+                        <div class="pointer-events-none absolute inset-px rounded-lg shadow-sm outline outline-gray-200"></div>
+                    </div>
+                </div>
+                <div class="mt-8 max-w-3xl mx-auto relative">
+                    <div class="absolute inset-px rounded-lg bg-cream-dark"></div>
+                    <div class="relative p-6 rounded-[calc(var(--radius-lg)+1px)]">
+                        <h3 class="text-xl font-semibold tracking-tight mb-3 text-mickey-black">Parking Information</h3>
+                        <p class="text-gray-600 text-sm/6">Standard parking is $25 per day and valid at all four theme parks. Preferred parking ($45-50) is available closer to park entrances. On-site resort guests receive complimentary parking.</p>
+                    </div>
+                    <div class="pointer-events-none absolute inset-px rounded-lg shadow-sm outline outline-gray-200"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Special Events Section -->
+        <section id="events" class="bg-white py-24 sm:py-32">
+            <div class="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
+                <h2 class="text-center text-base/7 font-semibold text-mickey-red-text">Celebrate</h2>
+                <p class="mx-auto mt-2 max-w-lg text-center text-4xl font-semibold tracking-tight text-balance text-mickey-black sm:text-5xl">Special Events & Seasons</p>
+                <div class="mt-10 grid gap-4 sm:mt-16 md:grid-cols-2 lg:grid-cols-4">
+                    <div class="relative">
+                        <div class="absolute inset-px rounded-lg bg-cream-dark"></div>
+                        <div class="relative p-6 rounded-[calc(var(--radius-lg)+1px)]">
+                            <h3 class="text-xl font-semibold tracking-tight mb-3 text-mickey-black">Holidays</h3>
+                            <p class="text-sm/6 text-gray-600">Special decorations and events during Christmas, Halloween, and other holidays throughout the year.</p>
+                        </div>
+                        <div class="pointer-events-none absolute inset-px rounded-lg shadow-sm outline outline-gray-200"></div>
+                    </div>
+                    <div class="relative">
+                        <div class="absolute inset-px rounded-lg bg-cream-dark"></div>
+                        <div class="relative p-6 rounded-[calc(var(--radius-lg)+1px)]">
+                            <h3 class="text-xl font-semibold tracking-tight mb-3 text-mickey-black">EPCOT Festivals</h3>
+                            <p class="text-sm/6 text-gray-600">Food & Wine (Fall), Flower & Garden (Spring), Festival of the Arts (Winter), and more.</p>
+                        </div>
+                        <div class="pointer-events-none absolute inset-px rounded-lg shadow-sm outline outline-gray-200"></div>
+                    </div>
+                    <div class="relative">
+                        <div class="absolute inset-px rounded-lg bg-cream-dark"></div>
+                        <div class="relative p-6 rounded-[calc(var(--radius-lg)+1px)]">
+                            <h3 class="text-xl font-semibold tracking-tight mb-3 text-mickey-black">Seasonal Decorations</h3>
+                            <p class="text-sm/6 text-gray-600">Parks transform with seasonal themes, special shows, and limited-time experiences.</p>
+                        </div>
+                        <div class="pointer-events-none absolute inset-px rounded-lg shadow-sm outline outline-gray-200"></div>
+                    </div>
+                    <div class="relative">
+                        <div class="absolute inset-px rounded-lg bg-cream-dark"></div>
+                        <div class="relative p-6 rounded-[calc(var(--radius-lg)+1px)]">
+                            <h3 class="text-xl font-semibold tracking-tight mb-3 text-mickey-black">Run Disney</h3>
+                            <p class="text-sm/6 text-gray-600">Marathon weekends and themed running events throughout the year for fitness enthusiasts.</p>
+                        </div>
+                        <div class="pointer-events-none absolute inset-px rounded-lg shadow-sm outline outline-gray-200"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Disney Blog Section -->
+        <section id="blog" class="bg-cream py-24 sm:py-32">
+            <div class="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
+                <h2 class="text-center text-base/7 font-semibold text-mickey-red-text">Latest News</h2>
+                <p class="mx-auto mt-2 max-w-lg text-center text-4xl font-semibold tracking-tight text-balance text-mickey-black sm:text-5xl">Disney Blog & News</p>
+                <p class="mx-auto mt-4 max-w-2xl text-center text-gray-600">Stay up to date with the latest Disney World news, tips, and updates from trusted sources.</p>
+                
+                <div class="mt-10">
+                    <!-- Loading State -->
+                    <div id="blog-loading" class="text-center py-8">
+                        <div class="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-indigo-400"></div>
+                        <p class="mt-4 text-gray-600">Loading latest articles...</p>
+                    </div>
+                    
+                    <!-- Error State -->
+                    <div id="blog-error" class="hidden text-center py-8">
+                        <p class="text-red-400 mb-2">Unable to load articles</p>
+                        <p class="text-gray-600 text-sm">Please try refreshing the page</p>
+                    </div>
+                    
+                    <!-- Blog Posts Grid -->
+                    <div id="blog-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resources Section -->
+        <section id="resources" class="bg-white py-24 sm:py-32">
+            <div class="mx-auto max-w-2xl px-6 lg:max-w-4xl lg:px-8">
+                <h2 class="text-center text-base/7 font-semibold text-mickey-red-text">Helpful Links</h2>
+                <p class="mx-auto mt-2 max-w-lg text-center text-4xl font-semibold tracking-tight text-balance text-mickey-black sm:text-5xl">Additional Resources</p>
+                <div class="mt-10 grid gap-4 sm:mt-16 md:grid-cols-2">
+                    <div class="relative">
+                        <div class="absolute inset-px rounded-lg bg-cream-dark"></div>
+                        <div class="relative p-6 rounded-[calc(var(--radius-lg)+1px)]">
+                            <h3 class="text-xl font-semibold tracking-tight mb-3 text-mickey-black">Official Resources</h3>
+                            <ul class="space-y-2 text-gray-600">
+                                <li>• <a href="https://disneyworld.disney.go.com" target="_blank" rel="noopener noreferrer" class="text-mickey-red-text hover:text-indigo-300 hover:underline">Disney World Official Website</a></li>
+                                <li>• <a href="https://disneyworld.disney.go.com/plan/my-disney-experience/" target="_blank" rel="noopener noreferrer" class="text-mickey-red-text hover:text-indigo-300 hover:underline">My Disney Experience App</a></li>
+                                <li>• <a href="https://disneyworld.disney.go.com/dining/" target="_blank" rel="noopener noreferrer" class="text-mickey-red-text hover:text-indigo-300 hover:underline">Dining Reservations</a></li>
+                            </ul>
+                        </div>
+                        <div class="pointer-events-none absolute inset-px rounded-lg shadow-sm outline outline-gray-200"></div>
+                    </div>
+                    <div class="relative">
+                        <div class="absolute inset-px rounded-lg bg-cream-dark"></div>
+                        <div class="relative p-6 rounded-[calc(var(--radius-lg)+1px)]">
+                            <h3 class="text-xl font-semibold tracking-tight mb-3 text-mickey-black">Planning Tips</h3>
+                            <ul class="space-y-2 text-gray-600">
+                                <li>• Book dining reservations 60 days in advance</li>
+                                <li>• Download the My Disney Experience app</li>
+                                <li>• Check park hours and special events calendar</li>
+                                <li>• Review Genie+ availability and pricing</li>
+                            </ul>
+                        </div>
+                        <div class="pointer-events-none absolute inset-px rounded-lg shadow-sm outline outline-gray-200"></div>
+                    </div>
+                </div>
+                <div class="mt-8 relative">
+                    <div class="absolute inset-px rounded-lg bg-cream-dark"></div>
+                    <div class="relative p-6 rounded-[calc(var(--radius-lg)+1px)] text-center">
+                        <p class="text-sm text-gray-600">
+                            <strong class="text-mickey-black">Disclaimer:</strong> This is an unofficial fan site and is not affiliated with, endorsed by, or connected to The Walt Disney Company or Walt Disney World Resort. All information is provided for planning purposes only.
+                        </p>
+                    </div>
+                    <div class="pointer-events-none absolute inset-px rounded-lg shadow-sm outline outline-gray-200"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-mickey-black text-white py-12" role="contentinfo">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <p class="text-xl font-bold mb-2">🏰 Disney World Guide</p>
+                <p class="text-gray-300 mb-4">&copy; 2026 Disney World Guide</p>
+                <p class="text-gray-400 text-sm">This is an unofficial fan site and is not affiliated with The Walt Disney Company.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- GSAP for smooth animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>
