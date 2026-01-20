@@ -343,7 +343,7 @@ html {
    ============================================ */
 
 .bento-number {
-    display: inline-block;
+    display: block;
     background: linear-gradient(135deg, #1A1A1A 0%, #333 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
