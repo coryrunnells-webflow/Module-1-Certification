@@ -197,6 +197,32 @@ html {
     border-width: 0;
 }
 
+/* ============================================
+   SKIP LINK - Accessibility
+   ============================================ */
+
+.skip-link {
+    position: absolute;
+    top: -100px;
+    left: 16px;
+    z-index: 9999;
+    padding: 16px 24px;
+    background-color: #E31837;
+    color: white;
+    font-weight: 700;
+    font-size: 1rem;
+    text-decoration: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+    top: 16px;
+    outline: 4px solid #FFD700;
+    outline-offset: 2px;
+}
+
 /* Line Clamp utilities for blog cards */
 .line-clamp-2 {
     display: -webkit-box;
