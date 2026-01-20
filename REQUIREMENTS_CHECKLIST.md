@@ -135,7 +135,7 @@
 >   - All interactive elements are focusable
 >   - Focus styles visible (`:focus-visible` with ring)
 >   - Accordions respond to Enter and Space keys
->   - Skip to content possible via anchor links
+>   - ✅ Skip link added - visible on focus, jumps to main content
 > 
 > - **Screen Reader Support:**
 >   - `.sr-only` class for visually hidden but screen-reader-accessible content
